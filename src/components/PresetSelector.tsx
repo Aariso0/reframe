@@ -144,7 +144,7 @@ export default function PresetSelector({ recipe, onChange }: Props) {
             <button
               key={`${preset}-${label}`}
               type="button"
-              aria-label={`${platform} ${label}`}
+              aria-label={`${label.replaceAll(":", " is to ")} output ratio`}
               aria-pressed={isActive}
               onClick={() => onChange({ preset })}
               className={cn(
